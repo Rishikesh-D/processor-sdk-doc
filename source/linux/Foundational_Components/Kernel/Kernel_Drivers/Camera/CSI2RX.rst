@@ -462,13 +462,11 @@ Enabling camera sensors
 
    Following sensors have been tested with the latest SDK.
 
-      +------------------------------------+----------------------------+----------------------+------------+
-      | Sensor                             | Media Bus Format           | Video Format         | Resolution |
-      +====================================+============================+======================+============+
-      | IMX219 RPi Camera                  | MEDIA_BUS_FMT_SRGGB8_1X8   | V4L2_PIX_FMT_SRGGB8  | 1920x1080  |
-      +------------------------------------+----------------------------+----------------------+------------+
-      | OV5640 MIPI CSI Camera             | MEDIA_BUS_FMT_YUYV8_1X16   | V4L2_PIX_FMT_YUYV    | 640x480    |
-      +------------------------------------+----------------------------+----------------------+------------+
+   .. csv-table:: Connection: Sensor + EVM
+      :header: "Sensor","Media Bus Format","Video Format","Resolution"
+
+      "IMX219 RPi Camera","MEDIA_BUS_FMT_SRGGB8_1X8","V4L2_PIX_FMT_SRGGB8","1920x1080"
+      "OV5640 MIPI CSI Camera","MEDIA_BUS_FMT_YUYV8_1X16","V4L2_PIX_FMT_YUYV","640x480"
 
 
 .. ifconfig:: CONFIG_part_variant in ('AM62PX')
@@ -478,19 +476,16 @@ Enabling camera sensors
 
    Following sensors and daughter cards have been tested with the latest SDK.
 
-       +------------------------------------+----------------------------+----------------------+------------+
-       | Sensor                             | Media Bus Format           | Video Format         | Resolution |
-       +====================================+============================+======================+============+
-       | IMX219 RPi Camera                  | MEDIA_BUS_FMT_SRGGB8_1X8   | V4L2_PIX_FMT_SRGGB8  | 1920x1080  |
-       +------------------------------------+----------------------------+----------------------+------------+
-       | OV5640 MIPI CSI Camera             | MEDIA_BUS_FMT_YUYV8_1X16   | V4L2_PIX_FMT_YUYV    | 640x480    |
-       +------------------------------------+----------------------------+----------------------+------------+
+   .. csv-table:: Connection: Sensor + EVM
+      :header: "Sensor","Media Bus Format","Video Format","Resolution"
 
-       +------------------------------------+----------------------------+----------------------+------------+
-       | Daughter Board + Sensor            | Media Bus Format           | Video Format         | Resolution |
-       +====================================+============================+======================+============+
-       | V3Link (Fusion Mini) board, OV5640 | MEDIA_BUS_FMT_YUYV8_1X16   | V4L2_PIX_FMT_YUYV    | 640x480    |
-       +------------------------------------+----------------------------+----------------------+------------+
+      "IMX219 RPi Camera","MEDIA_BUS_FMT_SRGGB8_1X8","V4L2_PIX_FMT_SRGGB8","1920x1080"
+      "OV5640 MIPI CSI Camera","MEDIA_BUS_FMT_YUYV8_1X16","V4L2_PIX_FMT_YUYV","640x480"
+
+   .. csv-table:: Connection: Sensor + Daughter Card + EVM
+      :header: "Daughter Board + Sensor","Media Bus Format","Video Format","Resolution"
+
+      "V3Link (Fusion Mini) board, OV5640","MEDIA_BUS_FMT_YUYV8_1X16","V4L2_PIX_FMT_YUYV","640x480"
 
 .. ifconfig:: CONFIG_part_variant in ('AM62AX')
 
@@ -732,31 +727,24 @@ Enabling camera sensors
       queue ! kmssink driver-name=tidss plane-properties=s,zpos=1
 
    CSI2RX testing details
-   =====================
+   ======================
 
    Following sensors and daughter cards have been tested with the latest SDK.
 
-       +------------------------------------+----------------------------+----------------------+------------+
-       | Sensor                             | Media Bus Format           | Video Format         | Resolution |
-       +====================================+============================+======================+============+
-       | IMX219 RPi Camera                  | MEDIA_BUS_FMT_SRGGB8_1X8   | V4L2_PIX_FMT_SRGGB8  | 1920x1080  |
-       +------------------------------------+----------------------------+----------------------+------------+
+   .. csv-table:: Connection: Sensor + EVM
+      :header: "Sensor","Media Bus Format","Video Format","Resolution"
 
-       +------------------------------------+----------------------------+----------------------+------------+
-       | Daughter Board + Sensor            | Media Bus Format           | Video Format         | Resolution |
-       +====================================+============================+======================+============+
-       | FPDLink fusion EVM, IMX390         | MEDIA_BUS_FMT_SRGGB12_1X12 | V4L2_PIX_FMT_SRGGB12 | 1936x1100  |
-       +------------------------------------+----------------------------+----------------------+------------+
-       | FPDLink fusion EVM, OV2312         | MEDIA_BUS_FMT_SBGGI10_1X10 | V4L2_PIX_FMT_SBGGI10 | 1600x1300  |
-       +------------------------------------+----------------------------+----------------------+------------+
-       | V3Link (Fusion Mini) board, IMX219 | MEDIA_BUS_FMT_SRGGB8_1X8   | V4L2_PIX_FMT_SRGGB8  | 1920x1080  |
-       +------------------------------------+----------------------------+----------------------+------------+
-       | V3Link (Fusion Mini) board, IMX390 | MEDIA_BUS_FMT_SRGGB12_1X12 | V4L2_PIX_FMT_SRGGB12 | 1936x1100  |
-       +------------------------------------+----------------------------+----------------------+------------+
-       | V3Link (Fusion Mini) board, OV2312 | MEDIA_BUS_FMT_SBGGI10_1X10 | V4L2_PIX_FMT_SBGGI10 | 1600x1300  |
-       +------------------------------------+----------------------------+----------------------+------------+
-       | DS90UB954-Q1 EVM, OV2312           | MEDIA_BUS_FMT_SBGGI10_1X10 | V4L2_PIX_FMT_SBGGI10 | 1600x1300  |
-       +------------------------------------+----------------------------+----------------------+------------+
+      "IMX219 RPi Camera","MEDIA_BUS_FMT_SRGGB8_1X8","V4L2_PIX_FMT_SRGGB8","1920x1080"
+
+   .. csv-table:: Connection: Sensor + Daughter Card + EVM
+      :header: "Daughter Board + Sensor","Media Bus Format","Video Format","Resolution"
+
+      "FPDLink fusion EVM, IMX390","MEDIA_BUS_FMT_SRGGB12_1X12","V4L2_PIX_FMT_SRGGB12","1936x1100"
+      "FPDLink fusion EVM, OV2312 ","MEDIA_BUS_FMT_SBGGI10_1X10","V4L2_PIX_FMT_SBGGI10","1600x1300"
+      "V3Link (Fusion Mini) board, IMX219","MEDIA_BUS_FMT_SRGGB8_1X8","V4L2_PIX_FMT_SRGGB8","1920x1080"
+      "V3Link (Fusion Mini) board, IMX390","MEDIA_BUS_FMT_SRGGB12_1X12","V4L2_PIX_FMT_SRGGB12","1936x1100"
+      "V3Link (Fusion Mini) board, OV2312","MEDIA_BUS_FMT_SBGGI10_1X10","V4L2_PIX_FMT_SBGGI10","1600x1300"
+      "DS90UB954-Q1 EVM, OV2312","MEDIA_BUS_FMT_SBGGI10_1X10","V4L2_PIX_FMT_SBGGI10","1600x1300"
 
 .. ifconfig:: CONFIG_part_variant in ('J721E')
 
