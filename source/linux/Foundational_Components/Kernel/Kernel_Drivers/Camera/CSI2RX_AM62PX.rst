@@ -1,3 +1,5 @@
+.. include:: _CSI2RX_common.rst
+
 .. _enabling-camera-sensors:
 
 ***********************
